@@ -1,5 +1,8 @@
 package ru.springdb;
 
+/**
+ * Represents a book with various attributes such as id, title, author, genre, pages, and price.
+ */
 public class Book {
     private int id;
     private String title;
@@ -8,6 +11,9 @@ public class Book {
     private int pages;
     private int price;
 
+    /**
+     * Default constructor for creating an empty Book object.
+     */
     public Book() {
         this.id = 0;
         this.title = "";
@@ -17,6 +23,16 @@ public class Book {
         this.price = 0;
     }
 
+    /**
+     * Constructor for creating a Book object with specified attributes.
+     *
+     * @param id the unique identifier of the book
+     * @param title the title of the book
+     * @param author the author of the book
+     * @param genre the genre of the book
+     * @param pages the number of pages in the book
+     * @param price the price of the book
+     */
     public Book(Integer id, String title, String author, String genre, int pages, int price) {
         this.id = id;
         this.title = title;

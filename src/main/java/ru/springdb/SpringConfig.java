@@ -11,6 +11,9 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 import java.util.Objects;
 
+/**
+ * Spring configuration class for setting up application context and beans.
+ */
 @Configuration
 @ComponentScan("ru.springdb")
 @PropertySource("classpath:application.properties")
@@ -18,6 +21,11 @@ public class SpringConfig {
     @Autowired
     private Environment env;
 
+    /**
+     * Configures and returns a DataSource bean.
+     *
+     * @return the configured DataSource
+     */
     @Bean
     DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
