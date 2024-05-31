@@ -1,13 +1,21 @@
 package ru.springdb;
 
 public class Book {
-    private Integer id;
+    private int id;
     private String title;
     private String author;
     private String genre;
     private int pages;
     private int price;
 
+    public Book() {
+        this.id = 0;
+        this.title = "";
+        this.author = "";
+        this.genre = "";
+        this.pages = 0;
+        this.price = 0;
+    }
 
     public Book(Integer id, String title, String author, String genre, int pages, int price) {
         this.id = id;
@@ -69,13 +77,12 @@ public class Book {
 
     @Override
     public String toString() {
-        return "ru.springdb.Book: " +
+        return "Book: " +
                 "id = " + id +
                 ", title = '" + title + '\'' +
                 ", author = '" + author + '\'' +
                 ", genre = '" + genre + '\'' +
                 ", pages = " + pages +
-                ", price = " + price +
-                '}';
+                ", price = " + price;
     }
 }
